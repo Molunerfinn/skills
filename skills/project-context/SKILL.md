@@ -50,7 +50,7 @@ Treat it like memory: only what matters. Before writing anything, ask two questi
 4. Write one file per project. Put shared facts (servers, machines, licensing flows and the like) in shared files and list them in the root README's "read first" table.
 5. Write the root README and end it with a line saying to read `.project-context/README.md` before editing these files.
 6. Run the check script.
-7. If there is a Claude memory directory for the workspace, add a reference memory: read the root README first, then `.project-context/<project>.md`.
+7. Add an entry point at the workspace root so agents load the index automatically: `AGENTS.md` with one line telling agents to read `README.md` first, then only the `.project-context/<project>.md` they need, followed by `@README.md`; and `CLAUDE.md` containing just `@AGENTS.md`. Skip a file that already exists and add the line to it instead.
 
 ## Day-to-day
 
