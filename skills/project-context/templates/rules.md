@@ -10,6 +10,7 @@ Read this before editing anything under `.project-context/` or the root README. 
 - Each fact lives in one place; elsewhere, link to it.
 - Unfinished work goes in a "to-do" section and is deleted once done.
 - When a project's facts change, edit only its file. When a project is added, removed or renamed, update the root README's project table. Worktrees get no file of their own; they go in the owning project's file.
+- Only long-lived worktrees are listed. Once a temporary worktree's branch is merged, ask the user whether to remove it (worktree and local branch), so they don't pile up.
 
 ## Information outside git
 

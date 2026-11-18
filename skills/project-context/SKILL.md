@@ -56,6 +56,7 @@ Treat it like memory: only what matters. Before writing anything, ask two questi
 
 - After finishing work in a project, ask the two questions above and update only that project's file with the conclusions; remove entries that are now stale or done.
 - When a project is added, removed or renamed, update the root README's project table.
+- Temporary worktrees (not long-lived) pile up if nobody removes them. Once a temporary worktree's branch is merged, ask the user whether to remove it; on a yes, check it has no uncommitted or unpushed work (submodules included), then `git worktree remove` it and delete the local branch.
 - Run the check script after editing.
 
 ## Check
