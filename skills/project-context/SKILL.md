@@ -64,4 +64,4 @@ Treat it like memory: only what matters. Before writing anything, ask two questi
 node ~/.claude/skills/project-context/scripts/check.mjs <workspace dir>
 ```
 
-It reports: files over the size limit, broken `.md` links, repos missing from the root index, and worktrees not mentioned in any project file. Fix what it prints; for size problems follow "Size" above.
+It reports: files over the size limit, broken `.md` links, repos missing from the root index, and worktrees not mentioned in any project file (a temporary worktree still on disk shows up here: delete it once done). Fix what it prints; for size problems follow "Size" above.

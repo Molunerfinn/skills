@@ -59,7 +59,7 @@ for (const entry of readdirSync(root, { withFileTypes: true }).sort((a, b) => a.
   const dirs = gitDirs(join(root, name));
   const isWorktree = dirs && realpathSync(dirs[0]) !== realpathSync(dirs[1]);
   if (isWorktree) {
-    if (!allText.includes(`\`${name}`)) problems.push(`TREE  ${name}: worktree of ${basename(dirname(dirs[1]))} not mentioned in any project file`);
+    if (!allText.includes(`\`${name}`)) problems.push(`TREE  ${name}: worktree of ${basename(dirname(dirs[1]))} not in any project file: delete it if temporary, or list it in the owning project's file if long-lived`);
   } else if (!rootText.includes(`\`${name}\``)) {
     problems.push(`INDEX ${name}: directory not in root README project table`);
   }
